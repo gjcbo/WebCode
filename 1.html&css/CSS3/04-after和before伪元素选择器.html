@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>04-after和befor伪元素选择器</title>
+	<style>
+		div::before {
+			/*必须带一个属性，content伪元素，其实::before是个盒子，只有写了content:""属性这个盒子才会显示*/
+			/*content 这个盒子是行内的，可以转换*/
+			content: "我";
+			background-color: pink;
+			width: 200px;
+			height: 200px;
+			/*block 和 inline-block的区别
+			1.block可以通过设置 margin:0 auto; 水平居中后者不可以
+			2.block独占一行，inline-block 可以一行显示
+			*/
+			display: inline-block;
+		}
+
+		div::after {
+			content: "18岁";
+		}
+	</style>
+</head>
+<body>
+	<div>今年</div>
+</body>
+</html>

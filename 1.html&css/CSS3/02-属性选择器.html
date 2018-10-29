@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>02-属性选择器</title>
+	<style>
+		/*li[class] {  选出所有带class属性的
+			background-color: pink;
+		}*/
+
+		/*li[class=demo] { 选出 class=demo的
+			background-color: green;
+		}*/
+
+		/*在正则表达式中：^开头 ，$结束*/
+		/*li[class^=test] { 选出所有class以 test开头的元素
+			background-color: #888;
+		}*/
+		/*选出以 test结束的， test既是开始又是结束*/
+		li[class$=test]{
+			background-color: green;
+		}
+	</style>
+</head>
+<body>
+	<ol>
+		<li class="demo">鹧鸪天*苏轼</li>
+		<li>鹧鸪天*苏轼</li>
+		<li>鹧鸪天*苏轼</li>
+		<li>鹧鸪天*苏轼</li>
+		<li>鹧鸪天*苏轼</li>
+		<li>鹧鸪天*苏轼</li>
+		<li class="test">鹧鸪天*苏轼</li>
+		<li class="test2">临江仙-苏轼</li>
+		<li class="firsttest">诉衷情-苏轼</li>
+		<li class="test3">江城子-苏轼</li>
+		<li>蝶恋花-苏轼</li>
+	</ol>
+</body>
+</html>

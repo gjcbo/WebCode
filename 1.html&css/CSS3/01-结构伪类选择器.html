@@ -1,0 +1,58 @@
+<!-- html:xt -->
+
+<!-- html:5 -->
+<!-- ! -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>01-结构伪类选择器</title>
+	<style>
+
+	/*a:hover 鼠标经过a链接的时候*/
+	/*
+		ul li:first-child{  选中第一个孩子
+			background-color: pink;
+		}
+		
+		ul li:last-child {
+			background: purple;
+		}
+
+		ul li:nth-child(2) {  选中第2个孩子
+			background-color: green;
+		}*/
+
+		/*even 偶数， odd：期数*/
+		/*ul li:nth-child(even){ 
+			background-color: green;
+		}
+
+		ul li:nth-child(odd){
+			background-color: pink;
+		}*/
+			
+		/*ul li:nth-child(2n + 1){ 
+			background-color: purple;
+		}*/
+
+		li:nth-child(2n+1){
+			background-color: green;
+		}
+
+
+	</style>
+</head>
+<body>
+	<ul>
+		<li>林断山明竹隐墙</li>
+		<li>乱蝉衰草小池塘</li>
+		<li>翻空白鸟时时见</li>
+		<li>照水红蕖细细香</li>
+		<li>苏轼</li>
+		<li>白居易</li>
+		<li>李清照</li>
+	</ul>
+
+</body>
+</html>

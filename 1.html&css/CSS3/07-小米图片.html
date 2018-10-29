@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>07-小米案例</title>
+	<style>
+		/*很好的例子:综合运用到伪类选择器，css3盒模型，定位相关知识
+		1.css3盒模型
+		2.伪类选择器
+		3.定位，绝对定位默认模式转换
+		4.圆角border-radius 没效果， 就用overflow：hidden
+		*/
+		div {
+			width: 632px;
+			height: 340px;
+			position: relative;
+			border-radius: 10px;
+			overflow: hidden;
+		}
+		div:hover::after {
+			content: ""; /*这个属性一定要写，就想定位后left:0, top:0;先写上，不写没效果*/
+			border: 20px solid red;
+			width: 100%;
+			height: 100%;
+			/*绝对定位默认模式转换：行内块*/
+			position: absolute;
+			/*定位的元素，先把边偏移写上，*/
+			left: 0;
+			top: 0;
+
+			box-sizing: border-box;
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+		<img src="mi.jpg" alt="">
+	</div>
+	<div>
+		<img src="mi.jpg" alt="">
+	</div>
+	<div>
+		<img src="mi.jpg" alt="">
+	</div>
+</body>
+</html>

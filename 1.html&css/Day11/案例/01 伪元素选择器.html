@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		span::before {
+			/*1.content属性必须要写*/
+			/*2.伪类选择器是一个行内元素，内容撑开盒子，不能设置宽高*/
+			content: "楚乔是";
+			background-color: skyblue;
+
+			/*行内元素不能设置宽高,等于没写*/
+			width: 100px;
+			height: 200px;
+			/*块级元素独占一行*/
+
+			/*display: block;*/
+			/*行内元素可以设置宽高、可以一行显示*/
+			/*display: inline-block;*/
+		}
+		span::after {
+			content: "的";
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<!-- before after 伪元素选择器 -->
+	<span>燕洵</span>
+	<a href="#">www.baidu.com</a>
+</body>
+</html>

@@ -1,0 +1,362 @@
+/**2018-11-3*/
+body {
+	background: #f3f5f7;
+}
+
+header{
+	width: 1300px;
+	height: 100px;
+	margin: 0 auto;
+	padding-top: 30px;
+}
+.logo {
+	width: 195px;
+	height: 48px;
+	float: left;
+}
+.logo a {
+	display: block;
+	width: 195px;
+	height: 42px;
+	background: url(../images/logo.png) no-repeat;
+	text-indent: -888px; /*文字不显示*/
+	overflow: hidden; /*多余部分切掉*/
+}
+
+nav {
+	float: left;
+	margin-left: 20px;
+}
+nav li {
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	margin-left: 25px;
+}
+nav li a {
+	display: block;
+	font-size: 18px;
+	height: 40px;
+	padding: 0 10px;
+}
+nav li a:hover {
+	border-bottom: 2px solid #00a4ff;
+}
+/*search部分*/
+.search 
+{
+	width: 410px;
+	height: 40px;
+	background-color: #FFF;
+	float: left;
+	margin-left: 160px;
+}
+.search input {
+	width: 361px;
+	height: 40px;
+	border: 1px solid #00a4ff;
+	outline:none; /*取消轮廓线*/
+	padding-left: 10px;
+	float: left;
+}
+.search button {
+	width: 49px;
+	height: 40px;
+	border: 0; /**点击之后不显示边框*/
+	outline: none; /*取消轮廓线*/
+	float: left; 
+	background: url(../images/fa-search.png);
+}
+
+.personal {
+	float: right;
+	height: 40px;
+	line-height: 40px; /*单行文本垂直居中*/
+	/*background-color: yellow;*/
+}
+.personal dt, .personal dd{
+	float: left;
+}
+.personal s {
+	text-decoration: none; /*取消中划线*/
+	position: relative;
+	padding: 0 20px;
+}
+/*伪类选择器 添加小圆点*/
+.personal s:after {
+	content:"";
+	background-color: red;
+	width: 6px;
+	height: 6px;
+	display: inline-block; /**转块才可以设置宽高*/
+	position: absolute;
+	right: 15px;
+	top: 0;
+	border-radius: 50%;
+}
+.personal span img {
+	border-radius: 50%;
+	transition: all 0.5s;
+	margin-right: 10px;
+}
+.personal span img:hover {
+	transform: rotate(360deg);
+}
+
+/*中间横幅部分*/
+.banner {
+	/*不给宽度，通栏的盒子*/
+	height: 420px;
+	background-color: #1c036c;
+}
+.inner {
+	height: 420px;
+	position: relative;
+}
+.subnav {
+	background-color: rgba(0,0,0,.3);
+	width: 190px;
+	/*不给高度，由内容撑高*/
+	position: absolute;
+	left: 0;
+	top:0;
+}
+.subnav li  {
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	position: relative;
+	margin: 5px 0;
+}
+
+.subnav a {
+	color: #FFF;
+	height: 16px;
+	display: block; /*转块才能设置宽高*/
+	height: 100%;
+}
+.subnav a:hover {
+	color: blue;
+}
+
+.subnav span {
+	position: absolute;
+	right: 20px;
+	top:0;
+}
+.circle {
+	/*background-color: green;*/
+	width: 180px;
+	height: 20px;
+	position: absolute;
+	/*定位元素垂直居中新写法，*/
+	left: 50%;
+	transform: translate(-50%); /*translate 50%是相对于自己的50%*/
+	bottom: 20px;
+}
+/*有个问题：圆点浮动后怎么居中显示 想复杂了，父盒子不给颜色*/
+.circle li {
+	width: 13px;
+	height: 13px;
+	border-radius: 6px;
+	margin: 5px;
+	background: #FFF;
+	float: left;
+	transition: all 0.3s;
+}
+.circle li:hover {
+	width: 20px;
+}
+
+.timeTable {
+	width: 228px;
+	height: 300px;
+	background: #FFF;
+	position: absolute;
+	right: 50px;
+	top:30px;
+}
+.timeTable dt {
+	background: skyblue;
+	color: #FFF;
+	font-size: 18px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+
+.timeTable dd {
+	padding: 15px 20px 0;
+}
+.timeTable li {
+	height: 60px;
+	/*不给宽和父亲一样宽*/
+	padding-top:10px;
+	border-bottom: 1px solid #ccc;
+}
+/*结构伪类选择器,*/
+.timeTable li:last-child {
+	border-bottom: 0;
+}
+
+/*注意：n 从 1 开始*/
+/*.timeTable li:nth-child(1) {
+	border-bottom: 0;
+}*/
+
+.timeTable h5 {
+	font-size: 16px;
+	font-weight: normal;
+}
+
+.timeTable dd a {
+	margin-top: 5px;
+	font-size: 16px;
+	text-align: center;
+	border: 1px solid #22b0ff;
+	color: #22b0ff;
+	/*行内元素设置上下padding ，margin无效，只有转块才好使。*/
+	height: 45px;
+	line-height: 45px; /*line-height= height 单行文本水平居中*/
+	display: block;
+}
+.timeTable dd a:hover {
+	background: #22b0ff;
+	color: white;
+}
+
+/*精品推荐*/
+.recomend {
+	background-color: #fff;
+	height: 80px;
+	box-shadow: 2px 2px 2px #ccc;
+	margin-top: 10px;
+	position: relative;
+}
+.rec-l {
+	height: 100%;
+	line-height: 80px;
+}
+.rec-l strong {
+	color: #22b0ff;
+	font-size: 18px;
+	padding: 0 20px;
+}
+.rec-l a {
+	padding: 0 10px;
+	font-size: 16px;
+}
+.recomend em {
+	color: #666;
+	position: absolute;
+	right: 20px;
+	top: 50%;
+	transform: translate(0,-50%);
+}
+
+/*精品推荐课程*/
+.products-hb {
+	/*有高度的盒子就怕不浮动，也不用清除浮动的*/
+	height: 40px;
+	width: 100%;
+	margin: 10px 0;
+	line-height: 40px;
+}
+.products-hb span {
+	float: left;
+	padding: 0 30px;
+	font-size: 18px;
+}
+.products-hb a {
+	float: right;
+	padding: 0 30px;
+}
+.product-bd li{
+	background-color: #FFF;
+	width: 228px;
+	height: 270px;
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	transition: all 0.5s; /*单位*/
+}
+
+.product-bd li:hover {
+	box-shadow: 2px 2px 2px #ccc; /*阴影*/
+	transform: translateY(-10px); /*往上走-10px;*/
+}
+/*选择最右边的5个*/
+.product-bd li:nth-child(5n) {
+	margin: 0;
+}
+.pro-img {
+	overflow: hidden;
+}
+.pro-img img{
+	transition: all 0.3s;
+}
+.pro-img img:hover {
+	margin-left: -5px;
+}
+
+.pro-title {
+	width: 145px;
+	height: 42px;
+	margin: 20px auto;
+	font-size: 14px;
+	color: #050505;
+}
+.pro-learningCount {
+	margin: 20px auto;
+	width: 145px;
+}
+.pro-learningCount span {
+	color: orange;
+}
+
+
+/*尾部*/
+footer {
+	height: 400px;
+	background-color: #Fff;
+	padding: 20px 0 0 20px;
+}
+
+.footer-l {
+	/*width: 400px;*/
+	height: 400px;
+	/*background: pink;*/
+	float: left;
+}
+
+.footer-l img {
+	margin-bottom: 30px;
+}
+.footer-l p {
+	line-height: 26px;
+}
+.footer-l a {
+	margin-top: 10px;
+	border: 1px solid #22b0ff;
+	padding: 5px 20px;
+	width: 100px;
+	display: block;
+}
+.footer-r {
+	height: 300px;
+	/*background-color: lightgray;*/
+	float: right;
+}
+.footer-r dl{
+	float: right;
+	/*background-color: pink;*/
+	margin-left: 100px;
+}
+.footer-r dt {
+	font-size: 14px;
+	line-height: 30px;
+}
+
+
+
+

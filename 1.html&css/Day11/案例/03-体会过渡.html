@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: pink;
+			/*1。单词是transition
+			2.多个属性用  , 逗号隔开
+			3.简写 all 0.5s;  //all代表线面写的所有属性都使用过渡
+			4.谁做过渡给谁加。*/
+			
+
+			/*transition: width 0.2s, height 0.3s;*/
+			transition:all 0.5s;
+		}
+		div:hover {
+			width: 800px;
+			height: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

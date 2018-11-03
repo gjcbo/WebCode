@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>07-让定位的盒子居中的两种写法</title>
+	<style>
+		.box1 {
+			width: 200px;
+			height: 200px;
+			background: pink;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+
+			/*居中的思路是一样的
+			1.先走父盒子的一般
+			2.在走自己的一般
+			问题是，自己的一般怎么走，以前是margin-left:自己的宽度 / 2;
+			现在有了translate(-50%,-50%); 这里的50%是自己的%50;
+			*/
+			/*transform：中的 translate() %百分之多少是
+			相对于自己来说的*/
+			transform: translate(-50%,-50%);
+		}
+	</style>
+</head>
+<body>
+	<div class="box1">
+		
+	</div>
+</body>
+</html>

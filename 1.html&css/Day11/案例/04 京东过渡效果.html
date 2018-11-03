@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			/*小技巧:父盒子比图片小,不让图片全部被看见，
+			后面添加过多效果，实现动画效果
+			*/
+			width: 183px;
+			height: 130px;
+			border: 1px solid #000;
+			/*子盒子比父盒子大，多余部分切掉*/
+			overflow: hidden;
+		}
+		div img {
+			width: 193px;
+			height: 130px;
+			/*谁做动画给谁添加过渡效果*/
+			/*all表示是所有属性都做过渡想过*/
+			transition: all 0.3s;
+		}
+		div img:hover{
+			margin-left: -10px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="1.jpg" alt="">
+	</div>
+</body>
+</html>

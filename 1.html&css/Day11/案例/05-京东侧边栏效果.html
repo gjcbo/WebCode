@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		.subnav {
+			border: 1px solid #000;
+			width: 20px;
+			margin: 100px auto;
+		}
+		li{
+			list-style: none;
+		}
+		.subnav li {
+			width: 20px;
+			height: 20px;
+			background-color: pink;
+			margin: 5px 0;
+
+			position: relative;
+		}
+		.subnav li div {
+			/*做过渡效果,从某一个值过渡到另一个值，必须要有初始值*/
+			width: 0;
+			height: 100%; /*高度跟他爹一样*/
+			background-color: green;
+			/*给谁做动画，给谁加*/
+			transition: width 0.5s;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+
+		
+		/*鼠标放到 subnav 里面的li上， li 里面的div做过渡效果*/
+		.subnav li:hover div {
+			width: 100px;
+		}
+
+
+		/*========================*/
+
+		.taiodong {
+			/*父盒子不给宽,默认是通栏的*/
+			width: 300px;
+			/*如果父盒子没给高，子盒子浮动后，不占位置，就无法撑出父盒子的高度*/
+			/*要么给一个高，要么清除浮动*/
+			height: 30px;
+			border: 1px solid #000;
+			margin: 100px auto;
+			position: relative;
+
+		}
+		.taiodong ul {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+
+		.taiodong li {
+			width: 20px;
+			height: 20px;
+			background-color: pink;
+			float: left;
+			margin:0 15px;
+		
+			position: relative;
+			/*z-index 默认为0，只有使用定位的盒子才可设置z-index
+			这是一个bug，上面的话时候错的，
+			这里要是写了z-index 就压不住下面的盒子了。？？
+			❌❌❌❌❌❌问题？wenti❌❌❌❌❌❌✅
+			*/
+			/*z-index: 1;*/
+		}
+
+		
+		/*给高度添加过渡效果*/
+		.taiodong li div {
+			width: 20px;
+			height: 0;
+			background-color: purple;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			/*添加过渡效果*/
+			transition: all 0.5s;
+			z-index: -1;
+		}
+		/*鼠标放到 taiodong 里面的 li 上 ，li 里面的div的高变化*/
+		.taiodong li:hover div{
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="subnav">
+		<ul>
+			<li><div></div></li>
+			<li><div></div></li>
+			<li><div></div></li>
+			<li><div></div></li>
+			<li><div></div></li>
+			<li><div></div></li>
+		</ul>
+	</div>
+
+	<div class="taiodong">
+		<ul>
+			<li><div></div></li>
+			<li><div></div></li>
+			<li><div></div></li>
+			<li><div></div></li>
+			<li><div></div></li>
+			<li><div></div></li>
+		</ul>
+	</div>
+</body>
+</html>

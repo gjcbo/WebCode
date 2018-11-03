@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>02文字对齐</title>
+	<style>
+		.box1{
+			width: 300px;
+			height: 30px;
+			border: 1px solid #000;
+			line-height: 30px;
+			margin-bottom: 20px;
+		}
+
+		.box1 span {
+			/*行内块：可以设置宽高 可以一行显示*/
+			display: inline-block;
+			width: 20px;
+			height: 20px;
+			background-color: pink;
+			/**/
+			vertical-align: middle;
+		}
+
+
+		/*图片底部缝隙，不给宽高，默认图片有缝隙，*/
+		.box2 {
+			border: 1px solid #000;
+		}
+		.box2 img {
+			/*使用vertical-align:属性，可以有效去除图片底部缝隙
+			/*vertical-align: middle; 居中对齐*/
+			/*vertical-align: top;顶部对齐*/
+			/*vertical-align: bottom;*/
+		}
+
+	</style>	
+</head>
+<body>
+	<div class = "box1">
+		<span></span>
+		时间匆匆。
+	</div>
+
+	<div class="box2">
+		<img src="2.png" alt="">
+		图片底部缝隙通过
+	</div>
+</body>
+</html>

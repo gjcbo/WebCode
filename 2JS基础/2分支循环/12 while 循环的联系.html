@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>	
+	<!-- 循环:重复的做同一件事，每个案例写三遍
+		循环需要：循环条件，计数器
+	 -->
+
+
+</head>
+<body>
+	<script type="text">
+		//eg1: 重复十遍我爱你们
+		// var i=0;
+		// while(i<10) {
+		// 	console.log("我爱你们"+(i+1));
+		// 	i++;
+		// }
+
+		//eg2: 求100以内的数的和
+		// var i =0;
+		// var sum = 0;
+		// while(i<=100){
+		// 	sum+=i;
+		// 	i++;
+		// }
+		// console.log(sum);
+
+		//eg3: 求6!
+		// var ji = 1; //存储积
+		// var i=1;//计数器
+		// while(i<=6) {
+		// 	ji *= i;
+		// 	i++;
+		// }
+		// console.log(ji);
+
+
+		//eg4: 1---100之间所有的偶数和
+		// var sum = 0;
+		// var i=1;//计数器
+		// while(i<100 ) {
+		// 	//100以内 && 偶数
+		// 	if (i%2==0) {
+		// 		sum+=i;
+		// 	}
+			
+		// 	i++;
+		// }
+		// console.log(sum);
+
+		//eg5: 				  奇数和
+		// var sum = 0;
+		// var i = 1;
+		// while(i<100) {
+		// 	if (i%2 != 0) {
+		// 		sum+=i;
+		// 	}
+		// 	i++;
+		// }
+		// console.log("一百以内的奇数和:",sum);
+
+		//eg6: 输出 1-100之间能够被7整除的数
+		// var i=1;//计数器
+		// while(i<100){
+		// 	if (i % 7 ==0) {
+		// 		console.log(i);
+		// 	}
+		// 	i++; //计数器
+		// }
+
+
+		//eg7:
+		// 求帐号和密码是否一致,登录的效果实现
+    	//提示用户输入帐号
+    	//提示用户输入密码
+    	//如果帐号或者密码不对,则一直提示用户输入帐号和密码
+    	//帐号--admin
+    	//密码--123---字符串类型
+    	var userName = prompt("请输入账号");
+    	var userPwd = prompt("请输入密码");
+    	while(userName!="admin" || userPwd!="123") {
+    		// 变量重新赋值
+    		userName=prompt("请输入账号");
+    		userPwd=prompt("请输入密码");
+    	}
+    	console.log("登录成功");
+
+	</script>
+
+
+	<!-- 第二遍 -->
+	<script type="text">
+		//eg1: 重复十遍我爱你们
+		// var i=0;
+		// while(i<10){ //循环条件
+		// 	console.log("我爱你们",i+1); //循环体
+		// 	i++;  //计数器
+		// }
+
+		//eg2: 求100以内的数的和
+		// var i=1;
+		// var sum=0;
+		// while(i<=100) { //循环体
+		// 	sum+=i; //循环条件
+		// 	i++; //计数器
+		// }
+		// console.log(sum);
+
+		//eg3: 求6!
+		// var i =1;
+		// var ji = 1;
+		// while(i<=6) { //循环条件
+ 	// 		//循环体
+ 	// 		ji*=i;
+ 	// 		//计数器
+ 	// 		i++;
+		// }
+		// console.log(ji);
+
+		//eg4: 1---100之间所有的偶数和
+		// var i=0;
+		// var sum=0;
+		// while(i<100){ //循环条件
+		// 	//循环体
+		// 	if (i%2==0) {
+		// 		sum+=i;
+		// 	}
+		// 	//计数器
+		// 	i++;
+		// }
+		// console.log(sum);
+
+		//eg5: 				  奇数和
+		// var sum=0;i=0;
+		// while(i<100) { //循环条件
+		// 	if(i%2 !=0) {
+		// 		sum+=i;
+		// 	}
+		// 	i++;
+		// }
+		// console.log(sum);
+
+
+		//eg6: 1-100之间能够被7整除的数
+		// var i=1;
+		// while(i<100){ //循环条件
+		// 	//循环体
+		// 	if(i%7==0){
+		// 		console.log(i);
+		// 	}
+		// 	//计数器
+		// 	i++;
+		// }
+
+		//eg7:
+		// 求帐号和密码是否一致,登录的效果实现
+    	//提示用户输入帐号
+    	//提示用户输入密码
+    	//如果帐号或者密码不对,则一直提示用户输入帐号和密码
+    	//帐号--admin
+    	//密码--123---字符串类型
+    	var userName = prompt("请输入账号");
+    	var userPwd  = prompt("请输入密码");
+    	// 循环条件
+    	while(userName !="admin" || userPwd!="123") {
+    		// 循环体
+    		userName = prompt("请输入账号");
+    		userPwd = prompt("请输入密码");
+    		//计数器
+    	}
+    	console.log("登录成功");
+
+	</script>
+
+	<!-- 第三遍 -->
+	<script>
+		//eg1: 重复十遍我爱你们
+		// var i=0;
+		// while(i<10) { //循环条件
+		// 	console.log("我爱你们"+(i+1)); //循环体
+		// 	i++; //计数器
+		// }
+
+		//eg2: 求100以内的数的和
+		// var i=1;
+		// var sum = 0;
+		// while(i<=100) {//循环条件
+		// 	//循环体
+		// 	sum+=i;
+		// 	//循环条件
+		// 	i++;
+		// }
+		// console.log(sum);
+
+
+		//eg3: 求6!
+		// var i=1;
+		// var sum=1;
+		// while(i<=6){ //循环条件
+		// 	//循环体
+		// 	sum*=i;
+		// 	//计数器
+		// 	i++;
+		// }
+		// console.log(sum);
+
+		//eg4: 1---100之间所有的偶数和
+		// var i=1;
+		// var sum = 0; 
+		// while(i<100) { //循环条件
+		// 	// 循环体
+		// 	if (i%2==0) {
+		// 		sum+=i;
+		// 	}
+		// 	// 计数器
+		// 	i++;
+		// }
+		// console.log(sum);
+
+
+		//eg5: 				  奇数和
+		// var i=0; sum=0;
+		// while(i<100){ //循环条件
+		// 	//循环体
+		// 	if(i%2!=0){
+		// 		sum+=i;
+		// 	}
+		// 	//计数器
+		// 	i++;
+		// }
+		// console.log(sum);
+
+
+		//eg6: 1-100之间能够被7整除的数
+		// var i=1;
+		// while(i<100) {
+		// 	if (i%7==0) {
+		// 		console.log(i);
+		// 	}
+		// 	i++;
+		// }
+
+
+		//eg7:
+		// 求帐号和密码是否一致,登录的效果实现
+    	//提示用户输入帐号
+    	//提示用户输入密码
+    	//如果帐号或者密码不对,则一直提示用户输入帐号和密码
+    	//帐号--admin
+    	//密码--123---字符串类型
+    	var userName = prompt("请输入用户名");
+    	var userPwd = prompt("请输入密码");
+    	// 循环条件
+    	while(userName !="admin" || userPwd !="123") {
+    		//循环体
+    		userName = prompt("请输入用户名");
+    		userPwd = prompt("请输入密码");
+
+    		//计数器
+    	}
+
+	</script>
+</body>
+</html>

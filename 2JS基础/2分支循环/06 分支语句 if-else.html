@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 所有练习每个3遍 -->
+	<!-- 第一遍 -->
+	<script type="text/html"> 
+		//eg1:
+		var age = 10;
+		if (age >=18) {
+			console.log("可以看电影了");
+		}else {
+			console.log("小伙子，少壮不努力，老大徒伤悲");
+		}
+		// eg2 :输入年龄，判断是否成年
+		var age = prompt("请输入您的年龄.");
+		if (parseInt(age) >=18) {
+			alert("成年人");
+		}else {
+			alert("小伙子，少壮不努力，老大徒伤悲");
+		}
+
+		// eg3:输入一个数，判断是奇数还是偶数
+		var num = prompt("请输入一个数");
+		if (parseInt(num) % 2 ==0) { //对2 取余数，如果为0 则为偶数、
+			alert("偶数");
+		}else {
+			alert("奇数");
+		}
+
+	</script>
+
+	<!-- 第二遍 -->
+	<script type="text/html">
+		//eg:输入年龄判断是否成年
+		var age = prompt("请输入您的年龄");
+		if (parseInt(age)) {
+			alert("谁道人生无再少，门前流水尚能西");
+		}else {
+			alert("小伙子，少壮不努力，老大徒伤悲");
+		}
+
+		//eg2:判断奇偶数
+		var num = prompt("请输入一个数");
+		if (parseInt(num) % 2 == 0) {
+			alert("偶数");
+		}else {
+			alert("奇数");
+		}
+
+	</script>
+
+	<!-- 第三遍练习 -->
+	<script>
+		var age = prompt("请输入您的年龄！");
+		console.log(age);
+		console.log(typeof(age));
+
+		if (age.length == 0) {  //判断是否为空
+			alert("请输入年龄");
+		}else if (parseInt(age) >= 18) {
+			alert("年颇老矣尚能饭否？");
+		}else  {
+			alert("少壮不努力，老大徒伤悲");
+		}
+
+		var num = prompt("请输入一个数字");
+		if(num.length ==0) {
+			alert("不能为空");
+		}else if (parseInt(num) %2==0) {
+			alert("偶数");
+		}else {
+			alert("奇数");
+		}
+
+	</script>
+</body>
+</html>

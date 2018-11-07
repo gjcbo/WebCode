@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 第一遍 -->
+	<script type="text/html">
+		var scroe = Number(prompt("请输入成绩")); //转换成NSNumber
+		if (!isNaN(scroe)) {
+			if (scroe > 90) {
+				console.log("A");
+			}else if(scroe > 80) {
+				console.log("B");
+			}else if(scroe > 70) {
+				console.log("C");
+			}else if(scroe > 60) {
+				console.log("D");
+			}else {
+				console.log("不及格");
+			}
+		}else {
+			console.log("您的输入有误");
+		}
+
+		// eg2:判断是否是闰年
+		var year = 2018;
+		if (year % 4 ==0 && year % 100) {
+			console.log("闰年");
+		}else {
+			console.log("平年");
+		}
+	</script>
+
+	<!-- 第二遍 变量名字写错了导致运行出不来-->
+	<script type="text/html">
+		var score = Number(prompt("请输入成绩"));
+		console.log(isNaN(score)); //is Not a Number
+
+		if (!isNaN(score)) {
+			console.log("1111");
+
+			if (score>90 && score <=100) {
+				alert("A");
+				console.log("222");
+			}else if(score > 80) {
+				alert("B");
+			}else if(score > 70) {
+				alert("C");
+			}else if(score > 60) {
+				alert("D");
+			}else {
+				alert("不及格");
+			}
+
+		}else {
+			alert("您的输入有误");
+		}
+
+		var a = "fdkj";
+		console.log(isNaN(a)); //true 不是数字
+
+
+	</script>
+
+	<!-- 第三遍 -->
+	<script>
+		var score = Number(prompt("请输入成绩"));
+		//判断是否是数字
+		if (!isNaN(score)) { //是数字
+
+			if (score>90 && score<=100) {
+				alert("A");
+			}else if(score>80) {
+				alert("B");
+			}else if(score>70) {
+				alert("C");
+			}else if(score > 60) {
+				alert("D");
+			}else {
+				alert("不及格,继续努力");
+			}
+		}else {
+			alert("你的输入有误");
+		}
+		//判断是否有值
+
+
+	</script>
+
+</body>
+</html>

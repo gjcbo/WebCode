@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 你总是怀疑对自己，有用吗？ 
+		做对自己有用的事，对自己有好处的事情
+		不理解，想不通，你需要要做两件事情，1.敲三遍。2.想 
+		学习不是一件愉快的事情，但是学会了，做出东西出来了，却是一件非常愉快的事情。
+		就是一个平常人，大部分工作就是抄袭模仿，使用系统、别人提供的api做事情，
+		就想开车，你需要的是熟练，熟练才能发明创造，碰到问题不要纠结，不要沮丧，就是学，不停的敲代码。看优秀的源码。
+	-->
+	<!-- ?  
+		table
+		th table header   表格的头
+		tr table row  表格和行
+		td table data cell 单元格
+	 -->
+	 <!-- 乘法口诀3遍 -->
+	 <script>
+	 	for(var i=1;i<10;i++) {
+	 		for(var j=1;j<=i;j++){
+	 			document.write(i+"*"+j+"="+i*j);
+				document.write("&nbsp;&nbsp;");
+	 		}
+	 		// i 每循环一次就换行
+	 		document.write("<br/>");
+	 	}	 	
+	 </script>
+
+	 <script type="text">
+	 	document.write("<table border='1px dashed #ccc' cellpadding='0' cellspacing='0' >");
+	 	for (var i=0;i<9;i++) {
+	 		document.write("<tr>"); //table row 表格的行
+
+	 		for(var j=0;j<=i;j++) {
+	 			// 单元格
+	 			document.write("<td>"+i+"*"+j+"="+i*j+"</td>");
+	 		}
+	 		document.write("</tr>");
+	 	}
+		document.write("</table>");	
+	 </script>
+
+	 <script type="text">
+	 	document.write("<table border ='1px'>");
+	 	for(var i=1;i<9;i++) {
+	 		// 行
+	 		document.write("<tr>");
+	 		for(var j=1;j<=i;j++) {
+	 			document.write("<td>"+i+"*"+j+"="+i*j+"</td>");
+	 		}
+	 		document.write("</tr>");
+	 	}
+	 	document.write("</table>");
+	 </script>
+
+
+	 <script type="text">
+	 	document.write("<table border='1px solid #ccc'>");
+
+	 	for(var i=1;i<=9;i++){
+	 		document.write("<tr>"); //行
+
+	 		for(var j=1;j<=i;j++){
+	 			
+	 			document.write("<td>"+i+"*"+j+"="+i*j+"</td>");
+	 		}	
+	 		document.write("</tr>"); //行
+
+	 	}
+
+	 	document.write("<talbe/>")
+	 </script>
+
+	<script type="text/html">
+// "&nbsp;&nbsp;&nbsp;&nbsp;");
+		document.write("<table border='1px solid #ccc' cellpadding='1' cellspacing='0'>");
+		for(var i=1;i<=9;i++) {
+			document.write("<tr>");
+			for(var j=1;j<=i;j++) {
+				document.write("<td>");
+				document.write(i+"*"+j+"="+i*j);
+				document.write("</td>");
+			}
+			document.write("</tr>")
+		}
+		document.write("</table>");
+	</script>
+
+</body>
+</html>

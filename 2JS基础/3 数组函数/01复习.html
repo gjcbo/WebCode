@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+    /*
+	   var a = 1;
+       var b = a++ + a++;
+       console.log(b);
+
+
+    	var a=1;
+    	var b=++a;
+    	console.log(b); //2
+    	console.log("a:",+a); //2
+    	var a1=1;
+    	var b1=a1++;
+    	console.log(b1); //1
+    	console.log("a1:"+a1); //2
+    	++在后,先参与运算然后自身+1
+    	++在前,先自身+1 在参与运算。 
+    	自身都要+1的, ++ 在前在后对运算结果影响较大。
+
+
+     	var a = 1;
+      	var b = ++a + a++;
+      	console.log(b); //4
+     	console.log(a); //3
+      
+      */
+
+
+
+     	    // 一个不好的地方----会出现bug的
+       var arr3=[-1,-2,-3];
+       //假设max变量中存储的是最大值
+       // var max=0;
+       var max=arr3[0];
+       for(var i=0;i<arr3.length;i++){
+         //判断这个变量的值和数组中每个元素的值是不是最大值
+         if(max<arr3[i]){
+           max=arr3[i];
+         }
+       }
+
+       console.log(max);
+	</script>
+</body>
+</html>

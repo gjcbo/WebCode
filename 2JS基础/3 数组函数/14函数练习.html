@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //输入年与日判断是一年的,第几天
+
+
+    //判断是不是如年
+    function isLoopYear(year) {
+        if (year%4==0 && year%100!=0 || year%400){
+            return true;
+        }
+        return false;
+    }
+
+    function getDays(year, month, day) {
+        //如果是一月份,直接返回输入的天数
+        var days = day;
+
+
+        //注意:1个等号叫赋值;两个等号叫判断。
+        if(month == 1) {
+            return days;
+        }
+
+        //如果是其他月份 eg:11-8;累加每月天数
+        //月份数组
+        var months =[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        for(var i=0;i<month-1;i++) { //从0 开始, 注意是 month-1.当月不计算在内
+            days+=months[i];
+        }
+
+        //如果是润年,2月多加一天
+        if (isLoopYear(year)) {
+            days++;
+        }
+        return days;
+    }
+
+    console.log(getDays(2018,11,1));
+
+
+    //统计输入的年与日
+//    var titles = ["请输入年份","请输入月","请输入日"];
+//    var nyr = [];
+//    for(var i=0;i<titles.length;i++) {
+//
+//        nyr[i] = parseInt(prompt(titles[i]));
+//    }
+//    console.log(nyr);
+
+
+
+</script>
+</body>
+</html>

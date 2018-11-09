@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //eg2:求数组中的最大值
+    //eg3:求数组中的最小值
+    //eg4:求数组的和
+    //eg5:求数组的最大值、最小值、和 ;传进来一个数组,返回一个数组[最大值,最小值,和]
+    //eg6:通过函数实现数组反转
+    //eg7:通过函数实现冒泡排序。
+    //eg8:求一个数的阶乘
+    //eg9:求一个数的阶乘和
+</script>
+<script>
+    //eg1:求两个数的差
+    function getSub(x,y) {
+        return x-y;
+    }
+    console.log(getSub(4,2));
+    //eg2:求数组中的最大值
+    function max(arr) {
+        var max = arr[0]; //假设最大值
+        for(var i=0; i<arr.length;i++){
+            if(max<arr[i]) {
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+    console.log(max([4,90,27,89])); //90
+
+
+
+    //eg3:求数组中的最小值
+    function getArrayMin(arr){
+        var i=0;
+        var min = arr[0]; //假设是最小值
+        while(i<arr.length) {
+            if (min>arr[i]) {
+                min = arr[i];
+            }
+            i++; //计数器
+        }
+
+        return min; //返回
+    }
+    console.log(getArrayMin([90,4,20,9]));
+
+    //eg4:求数组的和
+    function getArraySum(arr){
+        var sum =0;
+        for(var i=0;i<arr.length;i++){
+            sum += arr[i];
+        }
+
+        return sum;//返回
+    }
+    console.log(getArraySum([1,2,3,4,5]));
+
+    //eg5:求数组的最大值、最小值、和 ;传进来一个数组,返回一个数组[最大值,最小值,和]
+    function getArrayMaxMinSum(arr){
+        var max=arr[0]; //假设是最大值
+        var min = arr[0];//假设是最小值
+        var sum = 0;//和
+
+        for(var i=0;i<arr.length;i++) {
+            //最大值
+            if(max < arr[i]) {
+                max = arr[i];
+            }
+
+            //最小值
+            if(min > arr[i]) {
+                min = arr[i];
+            }
+
+            //和
+            sum+=arr[i];
+        }
+
+        //返回一个数组[最大值、最小值、和]
+        return [max,min, sum];
+    }
+
+    console.log(getArrayMaxMinSum([2,19,4,11,80]));
+
+    //eg6:通过函数实现数组反转
+    function reversArray(arr) {
+        for(var i=0;i<arr.length/2;i++) {
+            var temp = arr[i];
+            arr[i] = arr[arr.length-i-1];
+            arr[arr.length-i-1] = temp;
+        }
+
+        //返回反转后的数组
+        return arr;
+    }
+    console.log(reversArray([1,2,3,4,5]));
+
+    //eg7:通过函数实现冒泡排序。
+    //笨吗,没有想清楚。
+    function sortArr(arr) {
+        for(var i=0;i<arr.length-1;i++){
+            for(var j=0;j<arr.length-1-i;j++){
+                if (arr[j] > arr[j+1]) {
+                    var temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+                console.log("j:" + j + " "+ "arr["+j+"]"+"="+arr[j]);
+            }
+            console.log("========="+i);
+        }
+
+        return arr;
+    }
+
+    console.log(sortArr([1,4,2,7,5]));
+
+    //eg8:求一个数的阶乘
+    //eg9:求一个数的阶乘和
+
+
+</script>
+</body>
+</html>

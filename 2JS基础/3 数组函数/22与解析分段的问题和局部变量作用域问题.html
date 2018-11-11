@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * 函数预解析,声明会提前,
+     * 函数中的预解析只会提前到当前作用域前面,不会出去。
+     * 预解析会分段:多对script标签,函数重名,预解析不会冲突。
+     * */
+
+//    function f1(){
+
+        //等价下面代码
+        //var a;
+        //console.log(a);
+        //a=10;
+
+        //预解析
+//        console.log(a); //undefined
+//        var a=10;
+//    }
+//    f1();
+
+    function f2(){
+        console.log("我是上面的script标签中的f2");
+    }
+    f2();
+
+</script>
+
+<script>
+
+    f2();
+    function  f2() {
+        console.log("我是下面的script中的f2")
+    }
+</script>
+
+</body>
+</html>

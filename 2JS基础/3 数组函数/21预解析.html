@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+/**
+ * JS 的变量作用域和OC的不一样。一开始分不清,
+ *
+ * 预解析:提前解析代码,会把声明放到前面
+ * 函数预解析:
+ * 变量与解析:
+ *
+ * 块级作用域:js没有块级作用域。
+ *
+ * 局部变量: 定义在函数中的 var 修饰的变量。
+ * 全局变量:
+ * 隐式全局变量:没有var修饰的都是隐式全局变量
+ * eg: num = 10;
+ * eg2: var a=b=c=10; //说明:只有a有var修饰,b,c都是隐式全局变量。
+ *
+ * */
+
+
+    function f1() {
+        var a=b=c=9; //a 有var修饰,在函数内部,所以是局部变量
+    b,c 没有var修饰所以是隐式全局变量。
+
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    }
+
+    f1();
+
+    console.log("=========");
+
+    console.log(c);
+    console.log(b);
+    console.log(a);
+
+    function f1() {
+        var a=b=c=9;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+    }
+</script>
+</body>
+</html>

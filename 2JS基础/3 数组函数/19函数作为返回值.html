@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /**
+     * 函数可以作为返回值使用。
+     * */
+    function f1(){
+        console.log("f1调用了");
+        return function () {
+            console.log("这是一个函数");
+        };
+    }
+
+    var ff = f1();//调用
+    ff();
+</script>
+
+<script>
+    function f1(){
+        console.log("f1调用了");
+        return function () {
+            console.log("这是一个函数");
+        };
+    }
+    var ff = f1();
+    ff();
+</script>
+</body>
+</html>

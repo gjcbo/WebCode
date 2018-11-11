@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    eg1:
+//    var a=25;
+//    function abc() {
+//        alert(a); //undefined
+//        var a = 10;
+//    }
+//    abc();
+//    console.log(a); //25
+
+
+//    //eg2:
+//    var a=18;
+//    function f2() {
+//        var b=9;
+//        console.log(a); //18
+//        console.log(b); //9
+//        a = "123";
+//        console.log(a); //"123"
+//    }
+//    f2();
+
+
+
+
+
+//eg3:这个有点绕,隐式全局变量:没有var修饰,
+//var a=b=c=9; 表示只有a有var修饰,b,c都没有var修饰,是隐式全局变量
+
+    f1();
+
+    console.log(c); //
+    console.log(b); //
+    console.log(a); //报错?  因为a是在函数f1里面,使用了var修饰,
+//所以是局部变量,预解析不会超出变量作用域;但是b、c因为没有var修饰(注意,没有就是没有
+// 不要想当然的认为 var a=b=c=10; a,b,c都有var修饰,这是不对的),所以他们是
+//隐式全局变量,是当做全局变量来进行预解析的,所有是有值的。
+//通过代码的颜色也可以看出,a是局部变量,颜色和b、c明显不一样。
+
+    function f1() {
+        var a=b=c=9;
+        console.log(a); //
+        console.log(b); //
+        console.log(c); //
+    }
+
+</script>
+</body>
+</html>

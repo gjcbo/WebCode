@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    /**
+     * 函数作为参数使用,如果一个函数作为参数,那么我们就说这个参数(函数)
+     * 可以叫做回调函数
+     *
+     * 只要是看到一个函数作为参数使用了,那就是回调函数
+     * */
+    function sayHi(fn)  {
+        console.log("你好");
+        fn();
+    }
+    function boSay() {
+        console.log("我学习,我进步,我成长,我快乐");
+    }
+
+    sayHi(boSay);
+
+</script>
+<script>
+    function f1(f2) {
+        console.log(arguments);
+        //arguments对象:函数调用时获取传入的参数信息。
+        //调用函数f2
+        f2();
+    }
+    function f2() {
+        console.log("我是函数2");
+    }
+    f1(f2);
+
+</script>
+</body>
+</html>

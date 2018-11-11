@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    /**
+     *   正常的函数的定义
+     *   function 函数名(){
+     *      函数体;
+     *   }; //结尾要有分号。
+     *
+     * 有名函数:
+     *
+     *
+     * 匿名函数: 没有名字, anonymous(匿名的,无名的)
+     * 问题:1.没有名字,语法报错,-->使用函数表达式
+     * 2.申明的同时进行调用(自调用)。一次性的。
+     *
+     * 函数表达式:
+     * 函数的自调用
+     * */
+
+
+//    function f1() {
+//        console.log("函数1");
+//    }
+//    f1();
+//
+//    var f2 = function () {
+//        console.log("函数2");
+//    }; //记得加分号 ;
+//    f2();
+
+
+    //函数的自调用:没有名字,申明的同时进行调用。一次性的
+    (function() {
+        console.log("函数的自调用");
+    })();
+
+    function earnMoney(){
+        console.log("挣钱买房");
+    };
+    earnMoney();
+
+    //函数表达式
+    var f3 = function () {
+        console.log("挣钱买房+1");
+    };
+    f3(); //调用
+
+    //匿名函数:函数没有名字就是匿名函数:
+    // 语法报错。
+//    function () {
+//        console.log("函数没有名字就是匿名函数");
+//    };
+    (function () {
+        console.log("匿名函数:函数没有名字就是匿名函数");
+    })();
+
+
+
+    //函数申明
+    function f1() {
+        console.log("攒钱买房");
+    } //加不加;都可以。能省就省
+    f1();
+
+    //函数表达式
+    var f2 = function () {
+        console.log("学习效率要提高");
+    };
+    f2();
+    f2 = function () {
+        console.log("过的不好还不是因为你不学习");
+    };
+    f2();
+
+    //函数自调用
+    (function (){
+        console.log("函数自调用");
+    })();
+
+
+    //函数表达式 ,类似变量表达式。生命变量后可以重复赋值。
+    var num = 10;
+    console.log(num);
+    num = 100;
+    console.log(num);
+
+</script>
+</body>
+</html>

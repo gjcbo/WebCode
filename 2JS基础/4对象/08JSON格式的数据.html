@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/**
+		对象:有属性和方法，特指的某个事物
+		对象：一组无序属性的集合的键值对，属性的值可以使任何类型。
+		*/
+		function Dog(name){
+			this.name = name;
+		};
+
+		function Peron(name,age,sex,dog){
+			this.name = name;
+			this.age = age;
+			this.sex = sex;
+			this.dog = dog;
+			this.play() = function(){
+				console.log(this.name+"爱学习，爱敲代码");
+			};
+		}
+
+		var dog = new Dog("小灰灰");
+		console.log(dog);
+		var p = new Person("张三",18,"男",dog);
+		console.log(p);
+
+	</script>
+</body>
+</html>

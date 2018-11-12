@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/**
+		对象的设值、取值两种方式
+		1.点语法
+		p.name = "小明";
+
+		2.类似字典的方式，(个人感觉不好，key容易写错，且没提示)
+		p["name"] = "小明";
+		*/
+		
+		function Person(name,age) {
+			this.name = name;
+			this.age= age;
+			this.sayHi = function(){
+				console.log("当黑夜逝去，愿你起身迎接朝阳。");
+			}
+		}
+		var p = new Person("张三",18);
+
+		//可以使用类似OC的字典语法糖的方式设值、取值。
+		// p["key"] = "值";
+
+		p["name"] = "小明";
+		console.log(p["name"]);
+		p.sayHi();
+		p["sayHi"]();
+
+
+
+
+		// //通过字面量创建对象
+		// var dog = {
+		// 	name:"小黄",
+		// 	age:3,
+		// 	eat:function() {
+		// 		console.log(this.name + "爱吃骨头");
+		// 	},
+		// 	run:function(){
+		// 		console.log("狗跑的很快");
+		// 	}
+		// }
+		// dog.name = "小灰";
+
+
+		// console.log(dog);
+		// dog.eat();
+		// dog.run();
+	</script>
+</body>
+</html>
+
+

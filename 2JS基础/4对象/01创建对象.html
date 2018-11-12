@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>		
+</head>
+<body>
+<script>
+	/**
+	创建对象的三种方式。
+	创建对象就new一下。
+	1.调用系统的构造函数。
+	new Object();
+
+
+	2.自定义构造函数。
+	3.字面量
+	*/
+	var person = new Object();
+	person.name = "张三";
+	person.age = 18;
+	person.sayHi = function() {
+		console.log("你好");
+	};
+
+	console.log(person.name);
+	console.log(person.age);
+	person.sayHi();
+
+</script>	
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function createObject(name,age){
+			var obj = new Object();
+
+			//添加属性
+			obj.name = name;
+			obj.age = age;
+
+			//添加行为
+			obj.sayHi = function() {
+				console.log("我是:"+this.name+"今天表现棒棒的");
+			};
+
+			//返回
+			return obj;
+		}
+
+		var p = createObject("小明",18);
+		var p2 = createObject("小红",20);
+
+		p.sayHi();
+		p2.sayHi();
+
+		console.log(p);
+		console.log(p2);
+
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

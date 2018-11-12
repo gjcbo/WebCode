@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>	
+</head>
+<body>
+	<!-- 函数和构造函数的区别：
+		名字是否大写
+	 -->
+	 <script>
+	 	//自定义人的构造函数
+	 	function Person(name,age){
+	 		this.name = name;
+	 		this.age = age;
+
+	 		this.sayHi = function() {
+	 			console.log("你好JS");
+	 		};
+	 	}
+	 	var p = new Person("张三",18);
+	 	console.log(p.name);
+	 	p.sayHi();
+	 	//判断类型:判断 p 是不是 Person类型。 
+	 	console.log(p instanceof Person);
+
+
+	 	//自定义狗的构造函数
+	 	function Dog(name,age,color) {
+	 		this.name = name;
+	 		this.age = age;
+	 		this.color = color;
+
+	 		this.run = function() {
+	 			console.log("狗跑的很快");
+	 		};
+	 	}
+
+	 	var dog = new Dog("小黄",3,"黄色");
+	 	dog.run();
+
+	 	console.log(dog instanceof Dog); //true
+	 	console.log(dog instanceof Person); //false
+	 </script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//eg1: 
+		var obj = {};
+		obj.name = "王心凌";
+		obj.age = 19;
+		obj.sayHi = function() {
+			console.log("你好呀,我是:"+this.name);
+		};
+		obj.sayHi();
+
+
+		//eg2:注意写法
+		var obj2 = {
+			name:"刘德华",
+			age:58,
+			sayHi:function() {
+				console.log("你好，我是:"+this.name+"，我会唱歌");
+			},
+			dance:function() {
+				console.log("我还会跳舞");
+			}
+		};
+		obj2.sayHi();
+		obj2.dance();
+		console.log(obj2 instanceof Object);
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+

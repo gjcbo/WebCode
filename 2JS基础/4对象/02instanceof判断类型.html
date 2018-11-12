@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/**
+		instanceof  判断一个变量是否属于某种类型
+		dog instanceof Object
+
+		感觉和OC的 class有点类似。
+		*/
+
+		var dog = new Object();
+		dog.name = "小黄";
+		dog.age = 10;
+		dog.eat = function() {
+			console.log("狗爱吃骨头");
+		};
+
+		console.log(dog instanceof Array);
+		dog.eat();
+
+		function Person(name,age){
+			this.name = name;
+			this.age = age;
+			this.doSth = function(){
+				console.log("人会学习");
+			};
+		}
+
+		//创建对象使用 new 关键字
+		var p1 = new Person("张三",17);
+		p1.doSth();
+
+		console.log(p1 instanceof Person); //判断p1 是不是属于Peron类型 true
+		console.log(p1 instanceof Array); //false
+		console.log(p1 instanceof Object); //true
+	</script>
+</body>
+</html>

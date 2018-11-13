@@ -188,5 +188,168 @@ function f1()
 
 <img src="Media/4识别预解析的结果.png">
 
-对象。构造函数、自定义构造函数图解。
+### 对象。
+
+构造函数、自定义构造函数图解。
+
+对象的有三种创建方式：构造函数、自定义构造函数、字面量创建对象
+
+#### 构造函数：创建方法。初始化
+
+系统的构造函数:new  Object() 
+
+```
+var obj = new Object();
+obj.name = "张三";
+obj.age = 18;
+obj.sayHi = function() {
+    console.log(this.name + "您好");
+}
+
+obj.sayHi(); //调用对象的方法
+```
+
+
+
+自定义构造函数：
+
+构造函数与函数的区别：首字母是否大写。
+
+```
+
+		function Person(name,age){
+			this.name = name,
+			this.age = age,
+			this.sayHi = function(){
+				console.log("大家好我叫:"+this.name + "我是新来的");
+			}
+		}
+		var  p = new Person("张三",17);
+		console.log(p.name);
+		p.sayHi();
+```
+
+
+
+字面量创建对象:(一次性的)
+
+```
+var obj = {};
+	obj.name = "张三";
+	obj.sayHi = function() {
+		console.log("我今天表现棒棒的");
+	}
+	console.log(obj.name);
+	obj.sayHi();
+
+//----------------- 优化后的-------
+	var person = {
+		name:"李四",
+		age:18,
+		learning:function(){
+			console.log("学习要讲究效率");
+		}
+	}
+	console.log(person.name);
+	person.learning();
+```
+
+
+
+#### 值类型，引用类型
+
+C语言有指针，其他语言其实也有指针，只是把它影藏了，不让用而已。
+
+原始数据类型：number、string、boolean、undefined、null、object
+
+基本类型（简单类型）:number、string、boolean
+
+复杂类型（引用类型）：object
+
+空类型：undefined、null
+
+````
+var num;
+console.log(num); //undefined 目前认知，申明未定义就是空类型。
+````
+
+值类型的值存储在什么地方？栈中
+
+引用类型的值存储在那一块空间中？对象在堆上存储，地址在栈上存储
+
+```
+var num=10;//值类型，值在栈上
+var obj = {}; //复杂类型，对象在堆，地址(引用)在栈。
+```
+
+值类型作为函数的参数传递的是值
+
+引用类型作为函数的参数传递的是地址
+
+
+
+<img src="Media/5值类型引用类型内存图.png">
+
+#### 识别传递的是啥
+
+```
+// 下面代码输出的结果
+function Person(name,age,salary) {
+  this.name = name;
+  this.age = age;
+  this.salary = salary;
+}
+function f1(person) {
+  person.name = "ls";
+  person = new Person("aa",18,10);
+}
+
+var p = new Person("zs",18,1000);
+console.log(p.name);
+f1(p);
+console.log(p.name);
+```
+
+
+
+思考
+
+```
+//1. 
+var num1 = 10;
+var num2 = num1;
+num1 = 20;
+console.log(num1);
+console.log(num2);
+
+//2. 
+var num = 50;
+function f1(num) {
+    num = 60;
+    console.log(num);
+}
+f1(num);
+console.log(num);
+
+//3. 
+var num1 = 55;
+var num2 = 66;
+function f1(num, num1) {
+  num = 100;
+  num1 = 100;
+  num2 = 100;
+  console.log(num);
+  console.log(num1);
+  console.log(num2);
+}
+
+f1(num1, num2);
+console.log(num1);
+console.log(num2);
+console.log(num);
+```
+
+
+
+
 

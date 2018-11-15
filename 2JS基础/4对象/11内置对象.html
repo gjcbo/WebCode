@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/**
+		一 js是一门基于对象的语言，系统提供了一些类，可以模拟面向对象
+		js中分三种对象：
+		1.内置对象：系统自带的
+		Math
+		Array
+		String
+		Date
+		Object
+
+		2.自定义对象：new + 自定义构造函数 
+		3.浏览器对象： BOM
+
+		
+		二 如何验证对象是不是对象
+		instanceof 
+
+
+		三：静态对象、实例对象
+		实例对象：(OC的实例对象)通过构造函数创建出来的实例对象 一般小写
+		静态对象：（类对象） 首字母大写，
+
+		=实例对象只能调用：实例方法 ----->类似ios的   -号方法
+		静态对对象只能调用静态方法。----->类似ios的   +号方法
+
+		*/
+
+		function Person(name,age) {
+			this.name = name,
+			this.age = age
+		}
+		var p = new Person("张三",18);
+		console.log(p.name);
+
+
+		//验证一个对象是不是某种类型的。
+		console.log(p instanceof Person);
+
+
+	</script>
+</body>
+</html>

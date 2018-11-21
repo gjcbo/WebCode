@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <style>
+        #box {
+            width: 300px;
+            height: 300px;
+            background-color: #F10215;
+        }
+
+        #btn {
+            width: 100px;
+            height: 40px;
+            margin-bottom:10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">更改颜色</button>
+    <div id="box"></div>
+<!--
+	1.实现类似系统max函数
+	2.生成随机色
+ -->
+ <script>
+     //构造函数
+     function MyMath() {
+         console.log("哈哈哈");
+         this.myMax = function () {
+             var max = arguments[0];//假设是最大值 arguments获取所有的参数
+             for(var i=0;i<arguments.length;i++) {
+                 if (max<arguments[i]){
+                     max = arguments[i];
+                 }
+             }
+             return max; //返回最大值
+         };
+     }
+
+
+     //创建对象
+     var myM = new MyMath();
+     console.log(myM.myMax(6,2,3,4,5));
+     //问题:没法像 系统那样 Math.max(1,2,3,4,5);
+ </script>
+
+<!--随机色-->
+<script>
+
+    //一 随机数
+    // random() //[0,1) 左闭右开区间
+    var r = parseInt(Math.random() * 5); //0~4之间的随机数
+    console.log(r);
+
+    /**
+     思路 :一 生成随机色, 就是生成一个这样的字符串 #F10215
+     二 点击按钮修改颜色
+
+     */
+    function getRandomColor() {
+        //定义十六进制数组
+        var arr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
+
+        var str = "#";//用于评价数组
+        for(var i=0;i<6;i++) {
+            //生成[0,16)的随机数
+            var random = parseInt(Math.random() * 16);
+            str+=arr[random];//拼接
+        }
+        return str;
+    }
+
+//    console.log(getRandomColor());
+
+    //二点击事件
+    window.onload = function () {
+        //获取标签
+        var box = document.getElementById("box");
+        var btn = document.getElementById("btn");
+        console.log(btn);
+        console.log(box);
+
+        btn.onclick = function () {
+            //修改box的颜色
+            box.style.backgroundColor = getRandomColor();
+        }
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var dt = new Date();
+    console.log(dt);
+
+    var dt1 = new Date("2017-8-10"); //Thu Aug 10 2017 00:00:00 GMT+0800 (中国标准时间)
+    console.log(dt1);
+
+    var dt2 = new Date("2018/11/21"); //Wed Nov 21 2018 00:00:00 GMT+0800 (中国标准时间)
+    console.log(dt2);
+
+    var dt3 = Date.now(); //毫秒时间戳,十三位的
+    console.log(dt3);
+
+    console.log("=========");
+    var dt4 = new Date();
+    console.log(dt4.getFullYear());//年 2018
+
+    console.log(dt4.getMonth()); //月从0开始,真实月份需要+1
+    console.log(dt4.getDate());  //多少号
+    console.log(dt4.getDay());   //星期几
+    console.log(dt4.getHours()); //小时 24小时制
+    console.log(dt4.getMinutes());
+    console.log(dt4.getSeconds());
+
+    console.log("=============");
+
+
+    var dt5 = new Date();
+    console.log(dt5.toDateString()); //Wed Nov 21 2018
+    console.log(dt5.toLocaleDateString()); //2018/11/21
+    console.log(dt5.toTimeString()); //时分秒
+
+    //时间戳和 var dt3 = Date.now(); 的结果是一样的 十三位的时间戳
+    console.log(dt5.valueOf()); //1542812062357
+
+
+</script>
+</body>
+</html>

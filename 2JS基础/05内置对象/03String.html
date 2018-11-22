@@ -6,7 +6,38 @@
 </head>
 <body>
 <script>
-    var 
+    /// js没有字符类型
+    /**
+     * 字符和字符串的关系就类似于 "羊肉和羊肉串的关系"。
+     * split() , 用于分割字符串 类似于 OC 的 componentsSeparatedByString
+     *
+     * slice (起始点,截取几个字符):   类似 OC 的 NSString *subStr1 = [str2 substringWithRange:NSMakeRange(0, 1)];
+
+     * trim:
+     * */
+
+    var str = "字符和字符串的关系就类似'羊肉和羊肉串的关系'";
+    console.log(str);
+
+    //1.分割字符串 split()
+    var str1 = "张三|李四|王五|赵六";
+    console.log(str1);
+    var arr = str1.split("|");
+    console.log(arr);
+
+
+    //3.slice()
+    var str3 = "冬天来春天还会远吗?";
+    console.log(str3.slice(0, 1)); //从第0个位置开始截取一个字符
+
+
+
+    //4.trim()去掉首位的空格
+    var str4="   哦,这    是一个神奇的一天   ";
+    str4  = str4.trim();
+    console.log(str4);
+
 </script>
 </body>
+
 </html>
